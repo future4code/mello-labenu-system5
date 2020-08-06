@@ -13,7 +13,8 @@
   },
   "scripts": {
     "students": "tsc && node build/students.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "teachers": "tsc && node build/teachers.js"
   },
   "repository": {
     "type": "git",
