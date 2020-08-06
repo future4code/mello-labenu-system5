@@ -47,8 +47,8 @@ const Luiz: Student = new Student(1, "Luiz Melodia", "luiz@melodia.com", "07/01/
 const Elis: Student = new Student(2, "Elis Regina", "elis@regina.com", "17/05/1955", ["Ouvir música", "Cuidar do campo", "Ouvir discos"])
 const Jonh: Student = new Student(3, "John Coltrane", "jonh@coltrane.com", "23/09/1926", ["Transcendence", "Run", "Visual Arts"])
 const studantManager: StudentManager = new StudentManager
-// studantManager.addStudent(Luiz)
+studantManager.addStudent(Luiz)
 // studantManager.addStudent(Elis)
-// studantManager.addStudent(Jonh)
+studantManager.addStudent(Jonh)
 // studantManager.getStudents()
-studantManager.findStudent(2)
+studantManager.findStudent(3)

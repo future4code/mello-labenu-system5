@@ -26,11 +26,12 @@ exports.StudentManager = exports.Student = void 0;
 const moment_1 = __importDefault(require("moment"));
 const fs = __importStar(require("fs"));
 class Student {
-    constructor(id, name, email, birthday) {
+    constructor(id, name, email, birthday, hobbies) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.birthday = birthday;
+        this.hobbies = hobbies;
     }
 }
 exports.Student = Student;
@@ -59,12 +60,12 @@ class StudentManager {
     }
 }
 exports.StudentManager = StudentManager;
-const Luiz = new Student(1, "Luiz Melodia", "luiz@melodia.com", "07/01/51");
-const Elis = new Student(2, "Elis Regina", "elis@regina.com", "17/05/55");
-const Jonh = new Student(3, "John Coltrane", "jonh@coltrane.com", "23/09/26");
+const Luiz = new Student(1, "Luiz Melodia", "luiz@melodia.com", "07/01/1951", ["Butequim", "Viola", "Praia do Leme", "Literatura"]);
+const Elis = new Student(2, "Elis Regina", "elis@regina.com", "17/05/1955", ["Ouvir música", "Cuidar do campo", "Ouvir discos"]);
+const Jonh = new Student(3, "John Coltrane", "jonh@coltrane.com", "23/09/1926", ["Transcendence", "Run", "Visual Arts"]);
 const studantManager = new StudentManager;
-// studantManager.addStudent(Luiz)
+studantManager.addStudent(Luiz);
 // studantManager.addStudent(Elis)
-// studantManager.addStudent(Jonh)
+studantManager.addStudent(Jonh);
 // studantManager.getStudents()
-studantManager.findStudent(2);
+studantManager.findStudent(3);
