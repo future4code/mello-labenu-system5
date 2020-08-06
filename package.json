@@ -1,0 +1,26 @@
+{
+  "name": "mello-labenu-system5",
+  "version": "1.0.0",
+  "description": "Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização.",
+  "main": "index.js",
+  "dependencies": {
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "students": "tsc && node build/students.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/future4code/mello-labenu-system5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/future4code/mello-labenu-system5/issues"
+  },
+  "homepage": "https://github.com/future4code/mello-labenu-system5#readme"
+}
