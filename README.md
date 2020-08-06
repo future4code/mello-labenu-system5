@@ -1,33 +1,17 @@
 ## LabenuSystem:
 
-- ##Grupo##: Ana Terra, Lais Petra, Tatiana Fischer
+- Grupo: Ana Terra, Lais Petra, Tatiana Fischer
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+ Class Studantes representando estudantes da nossa instituição. Possuem id, nome, email, data de nascimento e os principais hobbies dele. 
 
-1. Estudantes 
+Class Teatche, representa docentes da nossa instituição. Possuem id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
 
-    Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele. 
+Class Mission, com id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
 
-2. Docente
-
-    Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
-
-3. Turma
-
-    Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
-
-    O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
-
-As funcionalidades básicas são:
-
+Funcionalidades básicas são:
 → Criar estudante;
-
 → Criar docente;
-
 → Criar turma;
-
 → Adicionar estudante na turma;
-
 → Adicionar docente na turma;
-
 → Pegar a idade de algum estudante a partir do id
