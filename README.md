@@ -1,6 +1,6 @@
 ## LabenuSystem:
 
-- *Grupo*: Ana Terra, Lais Petra, Tatiana Fischer
+- ##Grupo##: Ana Terra, Lais Petra, Tatiana Fischer
 
 Ele deve possuir, ao menos, as 3 entidades importantes:
 
