@@ -41,7 +41,7 @@ class StudentManager {
         this.students = JSON.parse(fs.readFileSync('./students.json').toString());
     }
     getStudents() {
-        console.log(this.students);
+        return this.students;
     }
     addStudent(newStudent) {
         this.students.push(newStudent);
@@ -65,7 +65,4 @@ const Elis = new Student(2, "Elis Regina", "elis@regina.com", "17/05/1955", ["Ou
 const Jonh = new Student(3, "John Coltrane", "jonh@coltrane.com", "23/09/1926", ["Transcendence", "Run", "Visual Arts"]);
 const studantManager = new StudentManager;
 studantManager.addStudent(Luiz);
-// studantManager.addStudent(Elis)
-studantManager.addStudent(Jonh);
-// studantManager.getStudents()
 studantManager.findStudent(3);

@@ -1,10 +1,11 @@
 {
   "name": "mello-labenu-system5",
   "version": "1.0.0",
-  "description": "Você estuda na Labenu_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização.",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "moment": "^2.27.0",
+    "node": "^14.7.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.7"
   },
@@ -15,7 +16,8 @@
     "students": "tsc && node build/students.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "teachers": "tsc && node build/teachers.js",
-    "mission": "tsc && node build/mission.js"
+    "mission": "tsc && node build/mission.js",
+    "print": "tsc && node build/MainTaskManager.js"
   },
   "repository": {
     "type": "git",
