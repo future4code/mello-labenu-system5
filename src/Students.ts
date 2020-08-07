@@ -9,7 +9,6 @@ export interface User {
     birthday: string
 }
 export class Student implements User {
-
     constructor(
         public id: number,
         public name: string,
@@ -23,7 +22,7 @@ export class StudentManager {
     students: any = JSON.parse(fs.readFileSync('./students.json').toString())
 
     public getStudents(): any {
-        console.log(this.students)
+        return this.students
     }
     public addStudent(newStudent: Student): void {
         this.students.push(newStudent)
@@ -48,7 +47,4 @@ const Elis: Student = new Student(2, "Elis Regina", "elis@regina.com", "17/05/19
 const Jonh: Student = new Student(3, "John Coltrane", "jonh@coltrane.com", "23/09/1926", ["Transcendence", "Run", "Visual Arts"])
 const studantManager: StudentManager = new StudentManager
 studantManager.addStudent(Luiz)
-// studantManager.addStudent(Elis)
-studantManager.addStudent(Jonh)
-// studantManager.getStudents()
 studantManager.findStudent(3)

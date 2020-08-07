@@ -22,7 +22,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Manager = void 0;
+exports.MissionManager = exports.Mission = void 0;
 const Teachers_1 = require("./Teachers");
 const Students_1 = require("./Students");
 const moment_1 = __importDefault(require("moment"));
@@ -49,6 +49,9 @@ class Mission {
     getEndDate() {
         return this.endDate;
     }
+    getStudents() {
+        return this.students;
+    }
     getCurrentModule() {
         return this.currentModule;
     }
@@ -62,6 +65,7 @@ class Mission {
         this.name = name;
     }
 }
+exports.Mission = Mission;
 class FullTimeMission extends Mission {
     constructor() {
         super(...arguments);
@@ -96,19 +100,19 @@ class NightMission extends Mission {
         this.allStudents.push(student);
     }
 }
-class Manager {
+class MissionManager {
     constructor() {
         this.missions = JSON.parse(fs.readFileSync("./missions.json").toString());
     }
     getMissions() {
-        console.log(this.missions);
+        return this.missions;
     }
     addMission(mission) {
         this.missions.push(mission);
         fs.writeFileSync("./missions.json", JSON.stringify(this.missions));
     }
 }
-exports.Manager = Manager;
+exports.MissionManager = MissionManager;
 const Elis = new Students_1.Student(2, "Elis Regina", "elis@regina.com", "17/05/1955", ["Ouvir música", "Cuidar do campo", "Ouvir discos"]);
 const Ana = new Students_1.Student(4, "Ana", "ana@email.com", "04/10/1982", ["ler", "gatinhos", "dormir"]);
 const lais = new Teachers_1.Teachers(2, "lais", "lais@gmail.com", "27/01/1995", [
@@ -118,5 +122,5 @@ const lais = new Teachers_1.Teachers(2, "lais", "lais@gmail.com", "27/01/1995", 
 const newMission = new FullTimeMission("1", moment_1.default("10/04/2020", "DD/MM/YYYY"), moment_1.default("10/11/2020", "DD/MM/YYYY"), [lais], [Elis], 3);
 newMission.addStudent(Ana);
 console.log(newMission.allStudents);
-const newManager = new Manager();
+const newManager = new MissionManager();
 newManager.addMission(newMission);

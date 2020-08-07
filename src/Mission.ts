@@ -4,16 +4,15 @@ import moment from 'moment';
 import * as fs from "fs";
 
 
-abstract class Mission {
+export abstract class Mission {
     protected name: string = "";
-    
-  
+
     constructor(
       private id: string,
       private startDate: moment.Moment,
       private endDate: moment.Moment,
       private teachers: Teachers[] = [],
-      private students: Student[] = [],
+      public students: Student[] = [],
       private currentModule: number|undefined
     ) {}
   
@@ -31,6 +30,9 @@ abstract class Mission {
   
     public getEndDate(): moment.Moment {
       return this.endDate;
+    }
+    public getStudents(): Student[] {
+      return this.students;
     }
   
     public getCurrentModule(): number | undefined {
@@ -88,11 +90,11 @@ abstract class Mission {
     }
   }
 
-  export class Manager {
+  export class MissionManager {
       missions:any = JSON.parse(fs.readFileSync("./missions.json").toString())
 
       getMissions():any{
-          console.log(this.missions)
+          return this.missions
       }
 
       addMission(mission:Mission):void{
@@ -117,7 +119,7 @@ abstract class Mission {
 
   console.log(newMission.allStudents);
 
-  const newManager:Manager = new Manager();
+  const newManager: MissionManager = new MissionManager();
 
   newManager.addMission(newMission);
 
