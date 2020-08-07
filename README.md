@@ -1,6 +1,6 @@
 ## LabenuSystem:
 
-- Grupo: Ana Terra, Lais Petra, Tatiana Fischer
+## Grupo: Ana Terra, Lais Petra, Tatiana Fischer
 
 - No arquivo Class.ts, temos a interface User, que é implementada pela class Studantes que representam estudantes da instituição. Possuem id, nome, email, data de nascimento e os principais hobbies dele. 
 
