@@ -19,7 +19,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TeacherManager = exports.Teachers = void 0;
+exports.TeacherManager = exports.Teachers = exports.TEACHER_SPECIALTY = void 0;
 const fs = __importStar(require("fs"));
 var TEACHER_SPECIALTY;
 (function (TEACHER_SPECIALTY) {
@@ -30,7 +30,7 @@ var TEACHER_SPECIALTY;
     TEACHER_SPECIALTY["TYPESCRIPT"] = "TYPESCRIPT";
     TEACHER_SPECIALTY["OOP"] = "OOP";
     TEACHER_SPECIALTY["BACKEND"] = "BACKEND";
-})(TEACHER_SPECIALTY || (TEACHER_SPECIALTY = {}));
+})(TEACHER_SPECIALTY = exports.TEACHER_SPECIALTY || (exports.TEACHER_SPECIALTY = {}));
 class Teachers {
     constructor(id, name, email, birthday, specialties) {
         this.id = id;

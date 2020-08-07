@@ -2,7 +2,7 @@ import moment from "moment";
 import { User } from "./Students";
 import * as fs from "fs";
 
-enum TEACHER_SPECIALTY {
+export enum TEACHER_SPECIALTY {
   REACT = "REACT",
   REDUX = "REDUX",
   CSS = "CSS",

@@ -14,7 +14,8 @@
   "scripts": {
     "students": "tsc && node build/students.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "teachers": "tsc && node build/teachers.js"
+    "teachers": "tsc && node build/teachers.js",
+    "mission": "tsc && node build/mission.js"
   },
   "repository": {
     "type": "git",
