@@ -2,7 +2,7 @@
 
 ## Grupo: Ana Terra, Lais Petra, Tatiana Fischer
 
-- No arquivo Class.ts, temos a interface User, que é implementada pela class Studantes que representam estudantes da instituição. Possuem id, nome, email, data de nascimento e os principais hobbies dele. 
+* No arquivo Class.ts, temos a interface User, que é implementada pela class Studantes que representam estudantes da instituição. Possuem id, nome, email, data de nascimento e os principais hobbies dele. 
 
 - No arquivo Teatcher.ts temos a class Teatcher, que tambem implementa a interface User, representando os docentes da instituição. Possuem id, nome, email, data de nascimento e todas as especialidades dele (React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend, configurados num ENUM)
 
