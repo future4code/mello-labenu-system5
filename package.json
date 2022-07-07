@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "node": "^14.7.0",
     "tsc": "^1.20150623.0",
     "typescript": "^3.9.7"
